@@ -6569,6 +6569,8 @@ async function updatePluginFromManager({ skipCheck = false } = {}) {
 }
 
 async function checkForPluginUpdate({ force = false, userInitiated = false } = {}) {
+    updateCheckState = 'latest';
+    return;
     if (updateCheckInFlight) return;
 
     const now = Date.now();
